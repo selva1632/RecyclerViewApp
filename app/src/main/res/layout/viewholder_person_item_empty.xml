@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="com.selva.recyclerviewapp.EmptyItemBinding">
+
+        <variable
+            name="bindingItem"
+            type="com.selva.recyclerviewapp.data.PersonViewItem.EmptyItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/empty_item_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lineHeight="17dp"
+            android:maxLines="2"
+            android:minHeight="103dp"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="26dp"
+            android:text="@{bindingItem.contextDescription}"
+            android:textAlignment="center"
+            android:textColor="#848487"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
