@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="com.selva.recyclerviewapp.FieldBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="bindingItem"
+            type="com.selva.recyclerviewapp.data.PersonViewItem.FieldItem" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/field_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/field_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:lineHeight="23sp"
+            android:text="@{bindingItem.title}"
+            android:textColor="#010102"
+            android:textSize="17sp"
+            tools:text="B.Tech">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/field_item_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:lineHeight="23sp"
+            android:text="@{bindingItem.subTitle}"
+            android:textColor="#737373"
+            android:textSize="13sp"
+            tools:text="NITPY" />
+
+        <View
+            android:id="@+id/item_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#E4E4E7"
+            android:visibility="@{bindingItem.dividerVisibility ? View.GONE : View.VISIBLE}" />
+    </LinearLayout>
+
+</layout>
